@@ -34,10 +34,16 @@ Welcome to the **CS2 Stars Calculator**! This web application helps players calc
 
 ## Installation and Setup
 
+### Open directly via GitHub Pages
+
+You can easily open the project in your browser using the following link:
+
+[**CS2 Stars Calculator - GitHub Pages**](https://natxo09.github.io/star-calculator-cs2/)
+
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/cs2-stars-calculator.git
+git clone https://github.com/Natxo09/star-calculator-cs2
 ```
 
 ### Running locally
