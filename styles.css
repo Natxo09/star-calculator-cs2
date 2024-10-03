@@ -144,7 +144,7 @@ span[data-lang="remainingStarsText"] {
     flex-grow: 1; /* Permite que el logo ocupe espacio central */
     display: flex;
     justify-content: center; /* Asegura que el logo esté centrado dentro de su contenedor */
-    margin-left: 100px;
+    margin-left: 30px;
 }
 
 .logo img {
@@ -269,6 +269,37 @@ footer p {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Estilos para el logo de GitHub */
+.github-logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.github-logo img {
+    width: 50px; /* Tamaño del logo de GitHub */
+    transition: transform 0.2s ease; /* Efecto de transición */
+}
+
+.github-logo img:hover {
+    transform: scale(1.05); /* Efecto de zoom ligero en hover */
+}
+
+/* Asegurar que el contenedor header mantenga la alineación de los elementos */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mantiene los elementos centrados */
+}
+
+.logo {
+    margin-right: 20px; /* Añadimos espacio entre los logos */
+}
+
+/* Otras reglas ya existentes */
+
 
 
 
