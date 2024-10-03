@@ -52,7 +52,7 @@ const translations = {
         totalPriceText: "Precio total:",
         maxStarsText: "Máximo de estrellas:",
         itemsTitle: "Artículos a canjear",
-        cajasGaleriaLabel: "Cajas Galería (2 estrellas cada una)",
+        cajasGaleriaLabel: "Cajas Galería (2 estrellas)",
         coleccionDeporteLabel: "Colección del Deporte (4 estrellas)",
         coleccionGraficaLabel: "Colección Gráfica (4 estrellas)",
         colganteArmasPeqLabel: "Colgante Armas Pequeñas (3 estrellas)",
