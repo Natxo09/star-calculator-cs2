@@ -1,0 +1,189 @@
+/* Modo oscuro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #2c2c2c;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    padding: 0px 20px;
+    color: rgb(30, 241, 135);
+    text-shadow: 0px 2px 15px rgba(0, 0, 0, 1);
+    font-size: 2.2em; /* Tamaño ajustado */
+    text-align: center; /* Centrado */
+}
+
+h2 {
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 1.6em; /* Reducido tamaño del subtítulo */
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100px;
+}
+
+.language-selector {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.language-selector select {
+    background-color: #3c3c3c;
+    color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 1.1em;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 60px;
+    margin-right: 20px;
+}
+
+input[type="checkbox"] {
+    width: 30px; /* Aumentado tamaño del checkbox */
+    height: 30px;
+    margin-right: 20px;
+}
+
+input[type="number"] {
+    width: 90px; /* Aumentado tamaño del input de número */
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #3c3c3c;
+    color: #fff;
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+input[type="number"]:disabled {
+    opacity: 0.5;
+}
+
+/* Estilo para los textos descriptivos */
+label[data-lang] {
+    color: #f4f4f4;
+    font-size: 1.2em; /* Aumentado tamaño de "Cantidad de pases comprados" y nombres de artículos */
+}
+
+/* Estilo para los valores numéricos */
+#precioTotal, #maxEstrellas, #estrellasRestantes {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #61dafb !important;
+}
+
+/* Color rojo cuando el valor es negativo */
+#estrellasRestantes.negative {
+    color: red !important; /* Cambia a rojo si el número es negativo */
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border: 1px solid #61dafb;
+}
+
+p span {
+    font-weight: bold;
+}
+
+input[type="checkbox"]:hover, input[type="number"]:hover {
+    cursor: pointer;
+    background-color: #444;
+}
+
+input[type="number"] {
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para los textos descriptivos (Precio total, Máximo de estrellas, Estrellas restantes) */
+span[data-lang="totalPriceText"], 
+span[data-lang="maxStarsText"], 
+span[data-lang="remainingStarsText"] {
+    font-size: 1.5em; /* Aumentado tamaño de los textos descriptivos */
+}
+
+/* Estilo para los valores numéricos */
+#precioTotal, #maxEstrellas, #estrellasRestantes {
+    font-weight: bold;
+    font-size: 1.8em; /* Tamaño de los números */
+    color: #61dafb !important;
+}
+
+/* Contenedor para logo y selector de idioma */
+.header {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente ambos elementos */
+    padding: 10px 0;
+}
+.logo {
+    flex-grow: 1; /* Permite que el logo ocupe espacio central */
+    display: flex;
+    justify-content: center; /* Asegura que el logo esté centrado dentro de su contenedor */
+    margin-left: 100px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.language-selector {
+    margin-left: auto; /* Empuja el selector hacia la derecha */
+}
+
+.language-selector select {
+    background-color: #3c3c3c;
+    color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #f4f4f4;
+    font-size: 1.1em; /* Aumentado un poco el tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+footer a {
+    color: #9147ff; /* Color morado para el enlace "natxo" */
+    text-decoration: none;
+    font-weight: bold; /* Asegura que el enlace también esté en negrita */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+

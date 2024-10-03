@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Calculator - CS2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/pase.png" type="image/png">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Contenedor para el logo y la selección de idioma en la misma fila -->
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo_cs_sm.svg" alt="Logo CS2">
+            </div>
+            <div class="language-selector">
+                <label for="language"></label>
+                <select id="language">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+
+        <h1 data-lang="title">Calculadora de Estrellas - CS2</h1>
+
+        <!-- Cantidad de Pases con Imagen -->
+        <div class="item">
+            <img src="img/pase.png" alt="Pase">
+            <label for="pases" data-lang="passesLabel">Cantidad de pases comprados:</label>
+            <input type="number" id="pases" min="0" value="0">
+        </div>
+
+        <!-- Precio Total -->
+        <p><span data-lang="totalPriceText">Precio total:</span> <span id="precioTotal">0.00</span> €</p>
+
+        <!-- Máximo de Estrellas -->
+        <p><span data-lang="maxStarsText">Máximo de estrellas:</span> <span id="maxEstrellas">0</span></p>
+
+        <!-- Selección de Artículos -->
+        <h2 data-lang="itemsTitle">Artículos a canjear</h2>
+
+        <!-- Caja Galería -->
+        <div class="item">
+            <img src="img/cajagaleria.png" alt="Caja Galería">
+            <input type="checkbox" id="cajasGaleria" class="articulo" data-cost="2">
+            <label for="cajasGaleria" data-lang="cajasGaleriaLabel">Cajas Galería (2 estrellas cada una)</label>
+            <input type="number" id="numCajasGaleria" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Colección del Deporte -->
+        <div class="item">
+            <img src="img/colecciondeporte.png" alt="Colección del Deporte">
+            <input type="checkbox" id="coleccionDeporte" class="articulo" data-cost="4">
+            <label for="coleccionDeporte" data-lang="coleccionDeporteLabel">Colección del Deporte (4 estrellas)</label>
+            <input type="number" id="numColeccionDeporte" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Colección Gráfica -->
+        <div class="item">
+            <img src="img/colecciongrafica.png" alt="Colección Gráfica">
+            <input type="checkbox" id="coleccionGrafica" class="articulo" data-cost="4">
+            <label for="coleccionGrafica" data-lang="coleccionGraficaLabel">Colección Gráfica (4 estrellas)</label>
+            <input type="number" id="numColeccionGrafica" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Colgante Armas Pequeñas -->
+        <div class="item">
+            <img src="img/colgantesarmaspequeñas.png" alt="Colgantes Armas Pequeñas">
+            <input type="checkbox" id="colganteArmasPeq" class="articulo" data-cost="3">
+            <label for="colganteArmasPeq" data-lang="colganteArmasPeqLabel">Colgante Armas Pequeñas (3 estrellas)</label>
+            <input type="number" id="numColganteArmasPeq" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Colgante Eslabón Perdido -->
+        <div class="item">
+            <img src="img/colganteseslabonperdido.png" alt="Colgante Eslabón Perdido">
+            <input type="checkbox" id="colganteEslabon" class="articulo" data-cost="3">
+            <label for="colganteEslabon" data-lang="colganteEslabonLabel">Colgante Eslabón Perdido (3 estrellas)</label>
+            <input type="number" id="numColganteEslabon" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Colección Overpass 2024 -->
+        <div class="item">
+            <img src="img/overpass2024.png" alt="Colección Overpass 2024">
+            <input type="checkbox" id="coleccionOverpass" class="articulo" data-cost="4">
+            <label for="coleccionOverpass" data-lang="coleccionOverpassLabel">Colección Overpass 2024 (4 estrellas)</label>
+            <input type="number" id="numColeccionOverpass" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Pegatinas de Elemental Craft -->
+        <div class="item">
+            <img src="img/StickerElemental.png" alt="Pegatinas Elemental Craft">
+            <input type="checkbox" id="pegatinasElem" class="articulo" data-cost="1">
+            <label for="pegatinasElem" data-lang="pegatinasElemLabel">Pegatinas de Elemental Craft (1 estrella)</label>
+            <input type="number" id="numPegatinasElem" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Pegatinas de Character Craft -->
+        <div class="item">
+            <img src="img/StickerCharacter.png" alt="Pegatinas Character Craft">
+            <input type="checkbox" id="pegatinasChar" class="articulo" data-cost="1">
+            <label for="pegatinasChar" data-lang="pegatinasCharLabel">Pegatinas de Character Craft (1 estrella)</label>
+            <input type="number" id="numPegatinasChar" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Desert Eagle Limited Edition -->
+        <div class="item">
+            <img src="img/limitededition.png" alt="Desert Eagle Limited Edition">
+            <input type="checkbox" id="desertEagle" class="articulo" data-cost="25">
+            <label for="desertEagle" data-lang="desertEagleLabel">Desert Eagle Edición Limitada (25 estrellas)</label>
+            <input type="number" id="numDesertEagle" class="cantidad" min="0" value="0" disabled>
+        </div>
+
+        <!-- Estrellas Restantes -->
+        <p><span data-lang="remainingStarsText">Estrellas restantes:</span> <span id="estrellasRestantes">0</span></p>
+    </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Made by <a href="https://twitch.tv/natxo" target="_blank">Natxo</a> with ❤️ for my gamblers (no commercial use allowed).
+            </p>
+        </footer>
+        
+    <script src="script.js"></script>
+</body>
+</html>
