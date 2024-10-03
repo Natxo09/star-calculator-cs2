@@ -69,7 +69,7 @@ const translations = {
         totalPriceText: "Total price:",
         maxStarsText: "Maximum stars:",
         itemsTitle: "Items to redeem",
-        cajasGaleriaLabel: "Gallery Boxes (2 stars each)",
+        cajasGaleriaLabel: "Gallery Boxes (2 stars)",
         coleccionDeporteLabel: "Sports Collection (4 stars)",
         coleccionGraficaLabel: "Graphic Collection (4 stars)",
         colganteArmasPeqLabel: "Small Arms Charm (3 stars)",
