@@ -187,3 +187,33 @@ footer p {
 }
 
 
+/* Contenedor para "Estrellas restantes" y el botón de reset */
+.stars-reset-container {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos en extremos opuestos */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilo del botón de reset */
+#resetButton {
+    background-color: #61dafb; /* Color azul */
+    color: #1e1e1e; /* Texto oscuro */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#resetButton:hover {
+    background-color: #4db7e5; /* Un poco más oscuro en hover */
+}
+
+#resetButton:focus {
+    outline: none;
+}
+
+

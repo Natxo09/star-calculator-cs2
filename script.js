@@ -6,6 +6,7 @@ const estrellasRestantesSpan = document.getElementById('estrellasRestantes');
 
 const articulos = document.querySelectorAll('.articulo');
 const cantidades = document.querySelectorAll('.cantidad');
+const resetButton = document.getElementById('resetButton');
 
 // Precio del pase y cantidad de estrellas por pase
 const precioPorPase = 15.19;
@@ -43,6 +44,20 @@ function calcular() {
         estrellasRestantesSpan.classList.remove('negative');
     }
 }
+
+// Función para resetear todos los campos y checkboxes
+function resetFields() {
+    pasesInput.value = 0;
+    articulos.forEach((articulo, index) => {
+        articulo.checked = false;
+        cantidades[index].value = 0;
+        cantidades[index].disabled = true;
+    });
+    calcular();
+}
+
+// Añadir funcionalidad de reset al botón
+resetButton.addEventListener('click', resetFields);
 
 // Traducciones para los textos en español e inglés
 const translations = {
