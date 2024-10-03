@@ -3,10 +3,11 @@ const pasesInput = document.getElementById('pases');
 const precioTotalSpan = document.getElementById('precioTotal');
 const maxEstrellasSpan = document.getElementById('maxEstrellas');
 const estrellasRestantesSpan = document.getElementById('estrellasRestantes');
-
 const articulos = document.querySelectorAll('.articulo');
 const cantidades = document.querySelectorAll('.cantidad');
 const resetButton = document.getElementById('resetButton');
+const calculoPartidasBtn = document.getElementById('calculoPartidasBtn');
+const extraContent = document.getElementById('extraContent');
 
 // Precio del pase y cantidad de estrellas por pase
 const precioPorPase = 15.19;
@@ -59,6 +60,26 @@ function resetFields() {
 // Añadir funcionalidad de reset al botón
 resetButton.addEventListener('click', resetFields);
 
+// Función para mostrar/ocultar el cálculo de partidas
+function toggleExtraContent() {
+    extraContent.style.display = extraContent.style.display === 'none' || extraContent.style.display === '' ? 'block' : 'none';
+}
+
+// Función para calcular las partidas necesarias para completar un pase
+function calcularPartidas() {
+    document.getElementById('partidas1').textContent = (40 / 1).toFixed(1);
+    document.getElementById('partidas1_25').textContent = (40 / 1.25).toFixed(1);
+    document.getElementById('partidas1_5').textContent = (40 / 1.5).toFixed(1);
+    document.getElementById('partidas1_75').textContent = (40 / 1.75).toFixed(1);
+    document.getElementById('partidas2').textContent = (40 / 2).toFixed(1);
+}
+
+// Añadir funcionalidad de mostrar/ocultar al botón de cálculo de partidas
+calculoPartidasBtn.addEventListener('click', () => {
+    toggleExtraContent();
+    calcularPartidas();  // Calcula las partidas solo cuando el contenido es visible
+});
+
 // Traducciones para los textos en español e inglés
 const translations = {
     es: {
@@ -76,7 +97,18 @@ const translations = {
         pegatinasElemLabel: "Pegatinas de Elemental Craft (1 estrella)",
         pegatinasCharLabel: "Pegatinas de Character Craft (1 estrella)",
         desertEagleLabel: "Desert Eagle Edición Limitada (25 estrellas)",
-        remainingStarsText: "Estrellas restantes:"
+        remainingStarsText: "Estrellas restantes:",
+        gameCalcTitle: "Estimar partidas necesarias para completar un pase (Premiere)",
+        starsPerGame: "Estrellas por partida",
+        gamesNeeded: "Partidas necesarias (40 estrellas)",
+        oneStarGame: "1 estrella/partida",  // Nueva traducción
+        one25StarGame: "1.25 estrellas/partida",  // Nueva traducción
+        one5StarGame: "1.5 estrellas/partida",  // Nueva traducción
+        one75StarGame: "1.75 estrellas/partida",  // Nueva traducción
+        twoStarGame: "2 estrellas/partida",  // Nueva traducción
+        showGamesCalc: "Mostrar cálculo de partidas",
+        gameCalcDescription: `Según mi experiencia, en partidas malas se obtiene aproximadamente 1 estrella, en partidas disputadas suele variar entre 1,25 y 1,5 estrellas, y en una muy buena partida se pueden conseguir hasta 1,75 estrellas. Es muy raro, pero a veces es posible alcanzar las 2 estrellas por partida. Estos datos están basados en mi experiencia jugando en Premiere. Si me estoy confundiendo, no dudes en corregirme. Además, si puedes compartir feedback sobre otros modos de juego en <a href="https://github.com/Natxo09/star-calculator-cs2" target="_blank">GitHub</a> o en <a href="https://x.com/_Natxete" target="_blank">Twitter</a>, sería de mucha ayuda.`
+
     },
     en: {
         title: "Star Calculator - CS2",
@@ -93,7 +125,20 @@ const translations = {
         pegatinasElemLabel: "Elemental Craft Stickers (1 star)",
         pegatinasCharLabel: "Character Craft Stickers (1 star)",
         desertEagleLabel: "Desert Eagle Limited Edition (25 stars)",
-        remainingStarsText: "Remaining stars:"
+        remainingStarsText: "Remaining stars:",
+        remainingStarsText: "Remaining stars:",
+        showGamesCalc: "Show game calculation",
+        gameCalcTitle: "Estimate games needed to complete a pass (Premiere)",
+        starsPerGame: "Stars per game",
+        gamesNeeded: "Games needed (40 stars)",
+        oneStarGame: "1 star/game",  // Nueva traducción
+        one25StarGame: "1.25 stars/game",  // Nueva traducción
+        one5StarGame: "1.5 stars/game",  // Nueva traducción
+        one75StarGame: "1.75 stars/game",  // Nueva traducción
+        twoStarGame: "2 stars/game",  // Nueva traducción
+        showGamesCalc: "Show game calculation",
+        gameCalcDescription: `Based on my experience, in bad games, you get approximately 1 star, in competitive games it usually varies between 1.25 and 1.5 stars, and in a very good game you can get up to 1.75 stars. It is rare, but sometimes it is possible to reach 2 stars per game. These numbers are based on my experience playing in Premiere. If I'm mistaken, feel free to correct me. Also, any feedback on other game modes would be very helpful, and you can reach me via <a href="https://github.com/Natxo09/star-calculator-cs2" target="_blank">GitHub</a> or <a href="https://x.com/_Natxete" target="_blank">Twitter</a>.`
+
     }
 };
 
@@ -102,7 +147,11 @@ function changeLanguage(lang) {
     const elements = document.querySelectorAll("[data-lang]");
     elements.forEach(element => {
         const key = element.getAttribute("data-lang");
-        element.textContent = translations[lang][key];
+        if (key === 'gameCalcDescription') {
+            element.innerHTML = translations[lang][key]; // Utilizamos innerHTML para que renderice los enlaces
+        } else {
+            element.textContent = translations[lang][key];
+        }
     });
 }
 

@@ -6,11 +6,10 @@
     <title>Star Calculator - CS2</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/pase.png" type="image/png">
-
 </head>
 <body>
     <div class="container">
-        <!-- Contenedor para el logo y la selección de idioma en la misma fila -->
+        <!-- Contenedor para el logo, botón de cálculo y la selección de idioma en la misma fila -->
         <div class="header">
             <div class="logo">
                 <img src="img/logo_cs_sm.svg" alt="Logo CS2">
@@ -114,23 +113,62 @@
             <input type="number" id="numDesertEagle" class="cantidad" min="0" value="0" disabled>
         </div>
 
-        <!-- Estrellas Restantes -->
+        <!-- Estrellas Restantes y Botón de Reset -->
         <div class="stars-reset-container">
             <p><span data-lang="remainingStarsText">Estrellas restantes:</span> <span id="estrellasRestantes">0</span></p>
+            
+            <button id="calculoPartidasBtn" data-lang="showGamesCalc">Mostrar cálculo de partidas</button>
             <button id="resetButton">Reset</button>
         </div>
-        
+
+        <!-- Contenedor extra que se muestra al hacer clic en el botón "Mostrar cálculo de partidas" -->
+        <div id="extraContent" class="extra-content" style="display: none;">
+            <h2 data-lang="gameCalcTitle">Estimar partidas necesarias para completar un pase</h2>
+            <table id="partidasEstimadas" class="tabla-estrellas">
+                <thead>
+                    <tr>
+                        <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-lang="oneStarGame">1 estrella/partida</td>
+                        <td id="partidas1">-</td>
+                    </tr>
+                    <tr>
+                        <td data-lang="one25StarGame">1.25 estrellas/partida</td>
+                        <td id="partidas1_25">-</td>
+                    </tr>
+                    <tr>
+                        <td data-lang="one5StarGame">1.5 estrellas/partida</td>
+                        <td id="partidas1_5">-</td>
+                    </tr>
+                    <tr>
+                        <td data-lang="one75StarGame">1.75 estrellas/partida</td>
+                        <td id="partidas1_75">-</td>
+                    </tr>
+                    <tr>
+                        <td data-lang="twoStarGame">2 estrellas/partida</td>
+                        <td id="partidas2">-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="descripcionEstimacion" data-lang="gameCalcDescription">
+                Según mi experiencia, en partidas malas se obtiene aproximadamente 1 estrella, en partidas disputadas suele variar entre 1,25 y 1,5 estrellas,
+                y en una muy buena partida se pueden conseguir hasta 1,75 estrellas. Es muy raro, pero a veces es posible alcanzar las 2 estrellas por partida.
+            </p>
+        </div>
 
     </div>
 
-
-        <!-- Footer -->
-        <footer>
-            <p>
-                Made by <a href="https://twitch.tv/natxo" target="_blank">Natxo</a> with ❤️ for my gamblers (no commercial use allowed).
-            </p>
-        </footer>
-        
+    <!-- Footer -->
+    <footer>
+        <p>
+            Made by <a href="https://twitch.tv/natxo" target="_blank">Natxo</a> with ❤️ for my gamblers (no commercial use allowed).
+        </p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
