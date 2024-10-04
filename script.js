@@ -98,7 +98,7 @@ const translations = {
         pegatinasCharLabel: "Pegatinas de Character Craft (1 estrella)",
         desertEagleLabel: "Desert Eagle Edición Limitada (25 estrellas)",
         remainingStarsText: "Estrellas restantes:",
-        gameCalcTitle: "Estimar partidas necesarias para completar un pase (Premiere)",
+        gameCalcTitle: "Estimación partidas necesarias para completar un pase (Premiere)",
         starsPerGame: "Estrellas por partida",
         gamesNeeded: "Partidas necesarias (40 estrellas)",
         oneStarGame: "1 estrella/partida",  // Nueva traducción
