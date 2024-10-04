@@ -16,30 +16,70 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Títulos */
 h1 {
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
     padding: 0px 20px;
     color: rgb(30, 241, 135);
     text-shadow: 0px 2px 15px rgba(0, 0, 0, 1);
-    font-size: 2.2em; /* Tamaño ajustado */
-    text-align: center; /* Centrado */
+    font-size: 2.2em;
+    text-align: center;
 }
 
 h2 {
     text-align: center;
     color: #f4f4f4;
-    font-size: 1.6em; /* Reducido tamaño del subtítulo */
+    font-size: 1.6em;
+}
+
+/* Estilos de logo */
+
+/* Logo de CS2 */
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Asegura que el logo de CS2 esté centrado */
 }
 
 .logo img {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 100px;
+    max-width: 100px; /* Tamaño adecuado del logo */
+    transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+.github-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.github-logo img {
+    width: 50px;
+    transition: transform 0.2s ease;
+}
+
+.github-logo img:hover, .logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre el logo de GitHub y el de CS2 */
+    align-items: center;
+    padding: 10px 0;
 }
 
 .language-selector {
+    margin-left: auto;
     text-align: right;
-    margin-bottom: 20px;
 }
 
 .language-selector select {
@@ -51,6 +91,7 @@ h2 {
     font-size: 1.1em;
 }
 
+/* Artículos */
 .item {
     display: flex;
     align-items: center;
@@ -63,13 +104,13 @@ h2 {
 }
 
 input[type="checkbox"] {
-    width: 30px; /* Aumentado tamaño del checkbox */
+    width: 30px;
     height: 30px;
     margin-right: 20px;
 }
 
 input[type="number"] {
-    width: 90px; /* Aumentado tamaño del input de número */
+    width: 90px;
     padding: 12px;
     border-radius: 5px;
     border: 1px solid #444;
@@ -77,28 +118,11 @@ input[type="number"] {
     color: #fff;
     font-size: 1.2em;
     margin-left: 15px;
+    transition: background-color 0.3s ease;
 }
 
 input[type="number"]:disabled {
     opacity: 0.5;
-}
-
-/* Estilo para los textos descriptivos */
-label[data-lang] {
-    color: #f4f4f4;
-    font-size: 1.2em; /* Aumentado tamaño de "Cantidad de pases comprados" y nombres de artículos */
-}
-
-/* Estilo para los valores numéricos */
-#precioTotal, #maxEstrellas, #estrellasRestantes {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: #61dafb !important;
-}
-
-/* Color rojo cuando el valor es negativo */
-#estrellasRestantes.negative {
-    color: red !important; /* Cambia a rojo si el número es negativo */
 }
 
 input[type="number"]:focus {
@@ -106,118 +130,48 @@ input[type="number"]:focus {
     border: 1px solid #61dafb;
 }
 
-p span {
-    font-weight: bold;
-}
-
 input[type="checkbox"]:hover, input[type="number"]:hover {
     cursor: pointer;
     background-color: #444;
 }
 
-input[type="number"] {
-    transition: background-color 0.3s ease;
+/* Textos descriptivos */
+label[data-lang] {
+    color: #f4f4f4;
+    font-size: 1.2em;
 }
 
-/* Estilo para los textos descriptivos (Precio total, Máximo de estrellas, Estrellas restantes) */
+p span {
+    font-weight: bold;
+}
+
+/* Valores numéricos y textos descriptivos */
 span[data-lang="totalPriceText"], 
 span[data-lang="maxStarsText"], 
 span[data-lang="remainingStarsText"] {
-    font-size: 1.5em; /* Aumentado tamaño de los textos descriptivos */
+    font-size: 1.5em; /* Tamaño de los textos descriptivos */
 }
 
-/* Estilo para los valores numéricos */
 #precioTotal, #maxEstrellas, #estrellasRestantes {
     font-weight: bold;
-    font-size: 1.8em; /* Tamaño de los números */
+    font-size: 1.8em; /* Tamaño correcto para los números */
     color: #61dafb !important;
 }
 
-/* Contenedor para logo y selector de idioma */
-.header {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Alinea verticalmente ambos elementos */
-    padding: 10px 0;
-}
-.logo {
-    flex-grow: 1; /* Permite que el logo ocupe espacio central */
-    display: flex;
-    justify-content: center; /* Asegura que el logo esté centrado dentro de su contenedor */
-    margin-left: 30px;
+/* Color rojo cuando el valor es negativo */
+#estrellasRestantes.negative {
+    color: red !important;
 }
 
-.logo img {
-    max-width: 100px;
-}
-
-.language-selector {
-    margin-left: auto; /* Empuja el selector hacia la derecha */
-}
-
-.language-selector select {
-    background-color: #3c3c3c;
-    color: #f4f4f4;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    font-size: 1.1em;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #f4f4f4;
-    font-size: 1.1em; /* Aumentado un poco el tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-}
-
-footer a {
-    color: #9147ff; /* Color morado para el enlace "natxo" */
-    text-decoration: none;
-    font-weight: bold; /* Asegura que el enlace también esté en negrita */
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer p {
-    margin: 0;
-}
-
-
-/* Contenedor para "Estrellas restantes" y el botón de reset */
+/* Botones */
 .stars-reset-container {
     display: flex;
-    justify-content: space-between; /* Alinea los elementos en extremos opuestos */
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
 
-/* Estilo del botón de reset */
-#resetButton {
-    background-color: #61dafb; /* Color azul */
-    color: #1e1e1e; /* Texto oscuro */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
-
-#resetButton:hover {
-    background-color: #4db7e5; /* Un poco más oscuro en hover */
-}
-
-#resetButton:focus {
-    outline: none;
-}
-
-
-#calculoPartidasBtn {
+#resetButton, #calculoPartidasBtn {
     background-color: #61dafb;
     color: #1e1e1e;
     padding: 10px 20px;
@@ -229,11 +183,11 @@ footer p {
     font-weight: bold;
 }
 
-#calculoPartidasBtn:hover {
+#resetButton:hover, #calculoPartidasBtn:hover {
     background-color: #4db7e5;
 }
 
-#calculoPartidasBtn:focus {
+#resetButton:focus, #calculoPartidasBtn:focus {
     outline: none;
 }
 
@@ -261,7 +215,7 @@ footer p {
     color: #f4f4f4;
 }
 
-/* Estilo del contenedor extra */
+/* Contenedor extra */
 .extra-content {
     margin-top: 20px;
     padding: 20px;
@@ -270,36 +224,23 @@ footer p {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Estilos para el logo de GitHub */
-.github-logo {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #f4f4f4;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
-.github-logo img {
-    width: 50px; /* Tamaño del logo de GitHub */
-    transition: transform 0.2s ease; /* Efecto de transición */
+footer a {
+    color: #9147ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, text-decoration 0.2s ease;
+    display: inline-block;
 }
 
-.github-logo img:hover {
-    transform: scale(1.05); /* Efecto de zoom ligero en hover */
+footer a:hover {
+    transform: scale(1.1);
 }
-
-/* Asegurar que el contenedor header mantenga la alineación de los elementos */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Mantiene los elementos centrados */
-}
-
-.logo {
-    margin-right: 20px; /* Añadimos espacio entre los logos */
-}
-
-/* Otras reglas ya existentes */
-
-
-
-
