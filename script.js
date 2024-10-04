@@ -137,7 +137,7 @@ const translations = {
         one75StarGame: "1.75 stars/game",  // Nueva traducción
         twoStarGame: "2 stars/game",  // Nueva traducción
         showGamesCalc: "Show game calculation",
-        gameCalcDescription: `Based on my experience, in bad games, you get approximately 1 star, in competitive games it usually varies between 1.25 and 1.5 stars, and in a very good game you can get up to 1.75 stars. It is rare, but sometimes it is possible to reach 2 stars per game. These numbers are based on my experience playing in Premiere. If I'm mistaken, feel free to correct me. Also, any feedback on other game modes would be very helpful, and you can reach me via <a href="https://github.com/Natxo09/star-calculator-cs2" target="_blank">GitHub</a> or <a href="https://x.com/_Natxete" target="_blank">Twitter</a>.`
+        gameCalcDescription: `Based on my experience, in bad games, you get approximately 1 star, in close games it usually varies between 1.25 and 1.5 stars, and in a very good game you can get up to 1.75 stars. It is rare, but sometimes it is possible to reach 2 stars per game. These numbers are based on my experience playing in Premiere. If I'm mistaken, feel free to correct me. Also, any feedback on other game modes would be very helpful, and you can reach me via <a href="https://github.com/Natxo09/star-calculator-cs2" target="_blank">GitHub</a> or <a href="https://x.com/_Natxete" target="_blank">Twitter</a>.`
 
     }
 };
