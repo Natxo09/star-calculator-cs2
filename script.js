@@ -111,7 +111,7 @@ const translations = {
 
     },
     en: {
-        title: "Star Calculator - CS2",
+        title: "Stars Calculator - CS2",
         passesLabel: "Number of passes bought:",
         totalPriceText: "Total price:",
         maxStarsText: "Maximum stars:",
