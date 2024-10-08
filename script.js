@@ -98,7 +98,7 @@ const translations = {
         pegatinasCharLabel: "Pegatinas de Character Craft (1 estrella)",
         desertEagleLabel: "Desert Eagle Edición Limitada (25 estrellas)",
         remainingStarsText: "Estrellas restantes:",
-        gameCalcTitle: "Estimación partidas necesarias para completar un pase (Premiere)",
+        gameCalcTitle: "Estimación partidas necesarias para completar un pase",
         starsPerGame: "Estrellas por partida",
         gamesNeeded: "Partidas necesarias (40 estrellas)",
         oneStarGame: "1 estrella/partida",  // Nueva traducción
@@ -107,7 +107,18 @@ const translations = {
         one75StarGame: "1.75 estrellas/partida",  // Nueva traducción
         twoStarGame: "2 estrellas/partida",  // Nueva traducción
         showGamesCalc: "Mostrar cálculo de partidas",
-        gameCalcDescription: `Según mi experiencia, en partidas malas se obtiene aproximadamente 1 estrella, en partidas disputadas suele variar entre 1,25 y 1,5 estrellas, y en una muy buena partida se pueden conseguir hasta 1,75 estrellas. Es muy raro, pero a veces es posible alcanzar las 2 estrellas por partida. Estos datos están basados en mi experiencia jugando en Premiere. Si me estoy confundiendo, no dudes en corregirme. Además, si puedes compartir feedback sobre otros modos de juego en <a href="https://github.com/Natxo09/star-calculator-cs2" target="_blank">GitHub</a> o en <a href="https://x.com/_Natxete" target="_blank">Twitter</a>, sería de mucha ayuda.`
+        gameCalcTitle: "Estimar partidas necesarias para completar un pase",
+        premiereTitle: "Premiere",
+        competitiveTitle: "Competitivo",
+        wingmanTitle: "Wingman",
+        deathmatchTitle: "Deathmatch",
+        armsRaceTitle: "Arms Race",
+        casualTitle: "Casual",
+        starsPerGame: "Estrellas por partida",
+        timePerGame: "Tiempo por partida",
+        starsPerHour: "Estrellas por hora",
+        gamesNeeded: "Partidas necesarias (40 estrellas)",
+        gameCalcDescription: `Datos recopilados de  <a href="https://www.youtube.com/watch?v=xjhpbUbW54I" target="_blank">Anomaly</a>.`
 
     },
     en: {
@@ -137,7 +148,18 @@ const translations = {
         one75StarGame: "1.75 stars/game",  // Nueva traducción
         twoStarGame: "2 stars/game",  // Nueva traducción
         showGamesCalc: "Show game calculation",
-        gameCalcDescription: `Based on my experience, in bad games, you get approximately 1 star, in close games it usually varies between 1.25 and 1.5 stars, and in a very good game you can get up to 1.75 stars. It is rare, but sometimes it is possible to reach 2 stars per game. These numbers are based on my experience playing in Premiere. If I'm mistaken, feel free to correct me. Also, any feedback on other game modes would be very helpful, and you can reach me via <a href="https://github.com/Natxo09/star-calculator-cs2" target="_blank">GitHub</a> or <a href="https://x.com/_Natxete" target="_blank">Twitter</a>.`
+        gameCalcTitle: "Estimate games needed to complete a pass",
+        premiereTitle: "Premiere",
+        competitiveTitle: "Competitive",
+        wingmanTitle: "Wingman",
+        deathmatchTitle: "Deathmatch",
+        armsRaceTitle: "Arms Race",
+        casualTitle: "Casual",
+        starsPerGame: "Stars per game",
+        timePerGame: "Time per game",
+        starsPerHour: "Stars per hour",
+        gamesNeeded: "Games needed (40 stars)",
+        gameCalcDescription: `Data collected from <a href="https://www.youtube.com/watch?v=xjhpbUbW54I" target="_blank">Anomaly</a>.`
 
     }
 };

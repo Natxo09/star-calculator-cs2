@@ -20,7 +20,6 @@
                 <a href="https://store.steampowered.com/sale/armory" target="_blank">
                     <img src="img/logo_cs_sm.svg" alt="Logo CS2">
                 </a>
-
             </div>
             <div class="language-selector">
                 <label for="language"></label>
@@ -132,41 +131,137 @@
         <!-- Contenedor extra que se muestra al hacer clic en el botón "Mostrar cálculo de partidas" -->
         <div id="extraContent" class="extra-content" style="display: none;">
             <h2 data-lang="gameCalcTitle">Estimar partidas necesarias para completar un pase</h2>
-            <table id="partidasEstimadas" class="tabla-estrellas">
+        
+            <!-- Tabla para Premiere -->
+            <h3 data-lang="premiereTitle">Premiere</h3>
+            <table id="partidasEstimadasPremiere" class="tabla-estrellas">
                 <thead>
                     <tr>
                         <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="timePerGame">Tiempo por partida</th>
+                        <th data-lang="starsPerHour">Estrellas por hora</th>
                         <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-lang="oneStarGame">1 estrella/partida</td>
-                        <td id="partidas1">-</td>
-                    </tr>
-                    <tr>
-                        <td data-lang="one25StarGame">1.25 estrellas/partida</td>
-                        <td id="partidas1_25">-</td>
-                    </tr>
-                    <tr>
-                        <td data-lang="one5StarGame">1.5 estrellas/partida</td>
-                        <td id="partidas1_5">-</td>
-                    </tr>
-                    <tr>
-                        <td data-lang="one75StarGame">1.75 estrellas/partida</td>
-                        <td id="partidas1_75">-</td>
-                    </tr>
-                    <tr>
-                        <td data-lang="twoStarGame">2 estrellas/partida</td>
-                        <td id="partidas2">-</td>
+                        <td>0.7 - 1.7</td>
+                        <td>40 min</td>
+                        <td>1.05 - 2.55</td>
+                        <td>23.5 - 57.1</td>
                     </tr>
                 </tbody>
             </table>
+        
+            <!-- Tabla para Competitivo -->
+            <h3 data-lang="competitiveTitle">Competitivo</h3>
+            <table id="partidasEstimadasCompetitivo" class="tabla-estrellas">
+                <thead>
+                    <tr>
+                        <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="timePerGame">Tiempo por partida</th>
+                        <th data-lang="starsPerHour">Estrellas por hora</th>
+                        <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.5 - 1.5</td>
+                        <td>30 min</td>
+                        <td>1 - 3</td>
+                        <td>26.7 - 80</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- Tabla para Wingman -->
+            <h3 data-lang="wingmanTitle">Wingman</h3>
+            <table id="partidasEstimadasWingman" class="tabla-estrellas">
+                <thead>
+                    <tr>
+                        <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="timePerGame">Tiempo por partida</th>
+                        <th data-lang="starsPerHour">Estrellas por hora</th>
+                        <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.25 - 0.5</td>
+                        <td>12 min</td>
+                        <td>1.25 - 2.5</td>
+                        <td>80 - 160</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- Tabla para Deathmatch -->
+            <h3 data-lang="deathmatchTitle">Deathmatch</h3>
+            <table id="partidasEstimadasDeathmatch" class="tabla-estrellas">
+                <thead>
+                    <tr>
+                        <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="timePerGame">Tiempo por partida</th>
+                        <th data-lang="starsPerHour">Estrellas por hora</th>
+                        <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.4 - 0.65</td>
+                        <td>10 min</td>
+                        <td>2.4 - 3.9</td>
+                        <td>61.5 - 100</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- Tabla para Arms Race -->
+            <h3 data-lang="armsRaceTitle">Arms Race</h3>
+            <table id="partidasEstimadasArmsRace" class="tabla-estrellas">
+                <thead>
+                    <tr>
+                        <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="timePerGame">Tiempo por partida</th>
+                        <th data-lang="starsPerHour">Estrellas por hora</th>
+                        <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.1 - 0.15</td>
+                        <td>7 min</td>
+                        <td>0.85 - 1.28</td>
+                        <td>266.7 - 400</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- Tabla para Casual -->
+            <h3 data-lang="casualTitle">Casual</h3>
+            <table id="partidasEstimadasCasual" class="tabla-estrellas">
+                <thead>
+                    <tr>
+                        <th data-lang="starsPerGame">Estrellas por partida</th>
+                        <th data-lang="timePerGame">Tiempo por partida</th>
+                        <th data-lang="starsPerHour">Estrellas por hora</th>
+                        <th data-lang="gamesNeeded">Partidas necesarias (40 estrellas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.75 - 1</td>
+                        <td>10 min</td>
+                        <td>4.5 - 6</td>
+                        <td>40 - 53.3</td>
+                    </tr>
+                </tbody>
+            </table>
+        
             <p id="descripcionEstimacion" data-lang="gameCalcDescription">
-                Según mi experiencia, en partidas malas se obtiene aproximadamente 1 estrella, en partidas disputadas suele variar entre 1,25 y 1,5 estrellas,
-                y en una muy buena partida se pueden conseguir hasta 1,75 estrellas. Es muy raro, pero a veces es posible alcanzar las 2 estrellas por partida.
+                Datos recopilados de <a href="https://www.youtube.com/watch?v=xjhpbUbW54I" target="_blank">Anomaly</a>.
             </p>
-        </div>
+        </div>        
 
     </div>
 
